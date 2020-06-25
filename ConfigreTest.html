@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="Assests/navbar.css">
-    <link rel="stylesheet" href="Assests/LandingPage.css">
+    <link rel="stylesheet" href="Assests/ConfigureTest.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     
@@ -38,35 +38,33 @@
 </div>
 
 
-  <main>
+  <div class="mainBox">
 
-  <div class="box1">
-
-    <div class="Textwrap"> 
-      <p id="landingpageSlogan"> <br>We make 
-        <br>exams easy</p>
-
-        <p id="landingpageP" >An online Exam Preparation and Learning Management System 
-         <br> that’s easy to use, and easy to manage</p>
-
-         <button>Create Test </button></div>
+    <div class="box">
    
-  </div>
+<input id="testName" class="textInput" type="text" placeholder="Test title">
 
+<label for="time">Publish Date & Time <input id="time" class="textInput" type="text" name="time"></label>
+<label for="duration">Test duration<input id="duration" class="textInput" type="text" name="duration"></label>
+
+<legend>Display</legend>
+<label for="random">Random<input type="radio" name="selection1" ></label>
+<label for="ordered">Ordered<input type="radio" name="selection1"></label>
+
+<legend>Backtracing</legend>
+<label for="random">Enable<input type="radio" name="selection1" ></label>
+<label for="ordered">Disabeled<input type="radio" name="selection1"></label>
+
+
+
+  </div>      
         
-  </div>
-
-
-  <div class="box2">
+   
     
-    <img id="humans" src="humaaans/homehuman.svg" alt="">
-
-  </div>
+ 
 
 
 
-
-</main>
 
 
 
