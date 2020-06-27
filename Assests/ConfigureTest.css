@@ -1,23 +1,15 @@
-.box{
+.box1{
     background-color: #F0F0F0;;
-    padding-top: 10%;
-    margin-top: 10px;
-
+    padding-top: 1%;
+    margin-top: 5px;
    
 }
-
-
-
 
 .mainBox{
     height: 100%;
     width: 100%;
-    display: flex;
-justify-content: center;
-justify-items: center;
-align-items: center;
-
-margin-top: 67px;
+margin-top: 0px;
+padding-top: 80px;
 }
 
 
@@ -32,6 +24,27 @@ margin-top: 67px;
 
 #testName{
     padding: 15px;
+    padding-right: 80px;
     margin-top: 0;
+    margin-bottom: 2%;
+}
 
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.questionBox{
+    background-color: #F0F0F0;;
+    padding-top: 1%;
+    margin-top: 5px;}
+
+
+#firstQuestion{
+    display: none;
 }

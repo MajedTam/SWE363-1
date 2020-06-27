@@ -1,0 +1,37 @@
+
+main{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* .mainBox{
+    display: inline-block;
+    margin-top: 67px;
+    height: 100%;
+    } */
+
+
+
+#outerLine{
+    height: 14px;
+    width: 70%;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+#innerLine{
+height: 6px;
+width: 99%;
+background-color: blueviolet;
+border-radius: 10px;
+margin-left: 3px;
+
+}
