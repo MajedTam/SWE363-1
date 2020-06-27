@@ -40,60 +40,48 @@
 
   <div class="mainBox">
 
-    <div class="box1">
-   
-<input id="testName" class="textInput" type="text" placeholder="Test title">
+    <div class="box">
 
-<label for="time">Publish Date & Time <input id="date" class="dateInput" type="date" name="date"></label>
-<label for="duration">Test duration</label>
+      <div class="boxContent">
+   
+<input id="testName" class="textInput" type="text" placeholder="Test title"> <br>
+
+<label for="time" class="boldLabels">Publish Date & Time <input id="date" class="dateInput" type="datetime-local" name="date"></label>
+<label for="duration" class="boldLabels">Test duration</label>
 <input id="durationHours" class="durationInput" type="number" min="0" max="23" name="duration" placeholder="H">
 <input id="durationMinuts" class="durationInput" type="number" min="1" max="59" name="duration" placeholder="M">
 
 <legend>Display</legend>
-<label for="random">Random<input type="radio" name="selection1" ></label>
-<label for="ordered">Ordered<input type="radio" name="selection1"></label>
+<input type="radio" name="selection1" checked="checked"> <label for="random" class="radioLabel">Random</label>
+<input type="radio" name="selection1"> <label for="ordered" class="radioLabel">Ordered</label>
 
 <legend>Backtracing</legend>
-<label for="random">Enable<input type="radio" name="selection1" ></label>
-<label for="ordered">Disabeled<input type="radio" name="selection1"></label>
-
-  </div> 
-
-      
-        
-  <div id="box2">
-   
-
-<div class="questionBox" id="firstQuestion" > 
-       
-         <label for="questionName">Question</label> <input id="questionName" class="textInput" type="text" name="questionName">
-         <label for="questionType">Type</label> 
-         <select id="questionType" class="selectType" name="questionName">
-           <option value="questionType1" selected>questiontype1</option>
-           <option value="questionType1" >questiontype2</option>
-           <option value="questionType1" >questiontype3</option>
-        </select> 
+<input type="radio" name="selection2" checked="checked" > <label for="random" class="radioLabel">Enable</label>
+<input type="radio" name="selection2"><label for="ordered" class="radioLabel">Disabled</label>
 </div>
-
-  <div class="questionBox" > 
-<button id="addButton">+</button>
- <label for="questionName">Question</label> <input id="questionName" class="textInput" type="text" name="questionName">
- <label for="questionType">Type</label> 
+  </div>    
+  
+  
+  <div class="questionBox"> 
+  <div class="boxContent">
+ <label for="questionName" class="boldLabels">Question</label> <input id="questionName" class="textInput" type="text" name="questionName">
+ <br>
+ <label for="questionType" class="boldLabels">Type</label> 
  <select id="questionType" class="selectType" name="questionName">
    <option value="questionType1" selected>questiontype1</option>
    <option value="questionType1" >questiontype2</option>
    <option value="questionType1" >questiontype3</option>
-</select> 
+</select>
 
- </div>
+</div>
 
- 
+  </div>
 
 </div>
         
    
     
-
+ 
 
 
 
@@ -107,7 +95,5 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="Assests/Questions.js"></script>
-
 </body>
 </html>
