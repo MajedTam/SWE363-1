@@ -2,12 +2,12 @@
 // change between MCQ and text answar
 document.addEventListener('change', function (e) {
 
-    console.log(e.target.parentNode.children)
-
-    var mcqType = e.target.parentNode.children[4]
-    var textAmswar = e.target.parentNode.children[3]
-
     if (e.target && e.target.className == 'selectType') {
+       
+        var mcqType = e.target.parentNode.children[4]
+        var textAmswar = e.target.parentNode.children[3]
+
+
         // change mcq to text
         mcqType.classList.toggle("hide");
         textAmswar.classList.toggle("hide");
@@ -15,8 +15,11 @@ document.addEventListener('change', function (e) {
     }
 });
 
+
+
+
 // counter
-i = 1;
+i = 0;
 
 
 // clone first question without any modifications
@@ -27,14 +30,13 @@ questionBluePrint = questionBluePrint[0].cloneNode(true);
 document.addEventListener('click', function (e) {
     if (e.target && e.target.className == 'addButton') {
 
-        // set uniqe name to make onle one selected
-        mcq = mcqBluePrint.cloneNode(true)
-        mcq.children[0].setAttribute("name", `num${i}`);
+     
         i++;
 
         var box2 = document.getElementById("box2");
         questionToAdd = questionBluePrint.cloneNode(true);
 
+        questionToAdd.children[4].children[0].children[0].setAttribute("name", 'num'+i);
         // add animation
         questionToAdd.classList.add("animate__animated", "animate__slideInUp")
 
@@ -62,10 +64,17 @@ mcqBluePrint = mcqBluePrint[0].cloneNode(true);
 document.addEventListener('click', function (e) {
     if (e.target && e.target.className == 'addMcq') {
 
-
-
-        mcq = mcqBluePrint.cloneNode(true)
+   // set uniqe name to make only one selected
+//    var mcq = e.target.parentNode.children[4]
+//    mcq.children[0].children[0].setAttribute("name", 'num'+i);
+//    i++;
+        mcq = e.target.parentNode.cloneNode(true);
         mcq.classList.add("animate__animated", "animate__fadeIn")
+        
+       
+
+      
+     
         e.target.parentNode.appendChild(mcq);
 
 
