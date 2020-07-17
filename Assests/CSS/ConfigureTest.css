@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+.mainBox{
+    height: 100%;
+    width: 100%;
+margin-top: 0px;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+
+>>>>>>> 35f9db1ec0f5b74ac5f078f373dd729df5c4838b
 .box{
     background-color: #F0F0F0;;
     padding-top: 1%;
@@ -6,6 +21,7 @@
     border-radius: 5px;
     margin-bottom: 30px;
     box-shadow:  0 0 10px  rgba(150, 150, 150, 0.1); 
+<<<<<<< HEAD
     
    
    
@@ -13,6 +29,18 @@
 
 main{
     margin-top: 150px;
+=======
+   }
+
+   .boxContent{
+  
+    padding: 30px
+}
+
+form{
+    width: 100%;
+    height: 100%;
+>>>>>>> 35f9db1ec0f5b74ac5f078f373dd729df5c4838b
 }
 
 #box2{
@@ -24,6 +52,7 @@ main{
     margin-bottom: 200px;
 }
 
+<<<<<<< HEAD
 
 .mainBox{
     height: 100%;
@@ -38,6 +67,31 @@ align-items: center;
 }
 
 
+=======
+.questionBox{
+    width:80%;
+    background-color: #F0F0F0;
+    padding-top: 1%;
+    margin: 20px 0 20px 0;;
+    border-radius: 5px;
+    height: auto;
+    padding: 30px;
+    box-shadow:  0 0 10px  rgba(150, 150, 150, 0.1); 
+    
+}
+
+
+main{
+    margin-top: 150px;
+}
+
+
+
+
+
+
+
+>>>>>>> 35f9db1ec0f5b74ac5f078f373dd729df5c4838b
 .textInput{
 
 
@@ -77,6 +131,7 @@ align-items: center;
 
 
 
+<<<<<<< HEAD
 .questionBox{
     background-color: #F0F0F0;
     padding-top: 1%;
@@ -88,6 +143,9 @@ align-items: center;
     box-shadow:  0 0 10px  rgba(150, 150, 150, 0.1); 
     
 }
+=======
+
+>>>>>>> 35f9db1ec0f5b74ac5f078f373dd729df5c4838b
 
 .background{
 
@@ -120,10 +178,14 @@ input[type=radio] {
     margin: 0 5px 0 10px;
 }
 
+<<<<<<< HEAD
 .boxContent{
   
     padding: 30px
 }
+=======
+
+>>>>>>> 35f9db1ec0f5b74ac5f078f373dd729df5c4838b
 
 .radioLabel{
     margin-left: 0px;
