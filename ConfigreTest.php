@@ -20,84 +20,113 @@
 <body>
 
 
-    <?php
-    require 'header.php';
-    ?>
+
+    <div class="header">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">ExamPlatform</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto nav-links">
+
+                    <a class="nav-item nav-link item" href="#">Home </a>
+                    <a class="nav-item nav-link " href="#">Contact</a>
+                    <a class="nav-item nav-link " href="#">Signed in as Ahmed</a>
+                </div>
+            </div>
+        </nav>
+
+
+    </div>
 
     <main>
+
+
         <div class="mainBox">
-
-
-
 
             <div class="box">
 
-                <div class="boxContent">
+                <form id="testForm" action="includes/db.php" method="POST">
 
-                    <input id="testName" class="textInput" type="text" placeholder="Test title"> <br>
+                    <div class="boxContent">
 
-                    <label for="time" class="boldLabels">Publish Date & Time <input id="date" class="dateInput"
-                            type="datetime-local" name="date"></label>
-                    <label for="duration" class="boldLabels">Test duration</label>
-                    <input id="durationHours" class="durationInput" type="number" min="0" max="23" name="duration"
-                        placeholder="H">
-                    <input id="durationMinuts" class="durationInput" type="number" min="1" max="59" name="duration"
-                        placeholder="M">
 
-                    <legend>Display</legend>
-                    <input type="radio" name="selection1" checked="checked"> <label for="random"
-                        class="radioLabel">Random</label>
-                    <input type="radio" name="selection1"> <label for="ordered" class="radioLabel">Ordered</label>
 
-                    <legend>Backtracing</legend>
-                    <input type="radio" name="selection2" checked="checked"> <label for="random"
-                        class="radioLabel">Enable</label>
-                    <input type="radio" name="selection2"><label for="ordered" class="radioLabel">Disabled</label>
-                </div>
-            </div>
+                        <input id="testName" name="testName" class="textInput" type="text" placeholder="Test title">
+                        <br>
 
-<form action=""></form>
+                        <label for="time" class="boldLabels">Publish Date & Time <input id="date" class="dateInput"
+                                type="datetime-local" name="date"></label>
+                        <label for="duration" class="boldLabels">Test duration</label>
+                        <input id="durationHours" class="durationInput" type="number" min="0" max="23"
+                            name="durationHours" placeholder="H">
+                        <input id="durationMinutes" class="durationInput" type="number" min="1" max="59"
+                            name="durationMinutes" placeholder="M">
 
-            <div id="box2">
+                        <legend>Display</legend>
+                        <input type="radio" name="selection1" checked="checked" value="Rndm"> <label for="random"
+                            class="radioLabel">Random</label>
+                        <input type="radio" name="selection1" value="Ordered"> <label for="ordered"
+                            class="radioLabel">Ordered</label>
 
-                <div class="questionBox">
+                        <legend>Backtracing</legend>
+                        <input type="radio" name="selection2" checked="checked" value="En"> <label for="random"
+                            class="radioLabel">Enable</label>
+                        <input type="radio" name="selection2" value="Dis"><label for="ordered"
+                            class="radioLabel">Disabled</label>
 
-                    <button class="addButton">+</button>
-                    <label for="questionName" class="boldLabels">Question</label> <input placeholder="Type your question here" class="textInput" type="text"
-                        name="questionName">
+                        <input class="btn" type="submit" value="Submit">
 
-                    <!-- Text answar -->
-                    <input type="text" class="textInput textAnswer hide" placeholder="Answer">
-
-                    <div class="mcqBox">
-
-                        <!-- mcq answar -->
-                        <div class="mcq">
-                            <input type="radio" class="answers" name="num0">
-                            <input type="text" class="mcqLabel">
-                            <button class="addMcq">+</button>
-                        </div>
                     </div>
-
-
-
-                    <label for="questionType" class="boldLabels">Type</label>
-
-                    <select class="selectType" name="questionName">
-                        <option value="questionType1">Text</option>
-                        <option value="questionType1" selected>MCQ</option>
-                    </select>
-
-
-
-
-                </div>
-
-
-
-
+                </form>
 
             </div>
+
+
+            <form id="questionForm" action="php/db.php" method="POST">
+
+                <div id="box2">
+
+
+                    <div class="questionBox">
+
+                        <button class="addButton" type="button">+</button>
+                        <label for="questionName" class="boldLabels">Question</label> <input
+                            placeholder="Type your question here" class="textInput" type="text" name="questionName">
+
+                        <!-- Text answar -->
+                        <input type="text" class="textInput textAnswer hide" placeholder="Answer">
+
+                        <div class="mcqBox">
+
+                            <!-- mcq answar -->
+                            <div class="mcq">
+                                <input type="radio" class="answers" name="num0">
+                                <input type="text" class="mcqLabel">
+                                <button class="addMcq" type="button">+</button>
+                            </div>
+                        </div>
+
+
+                        <label for="questionType" class="boldLabels">Type</label>
+
+                        <select class="selectType" name="questionName">
+                            <option value="questionType1">Text</option>
+                            <option value="questionType1" selected>MCQ</option>
+                        </select>
+
+
+                    </div>
+                </div>
+
+            </form>
+
+
+
+        </div>
     </main>
 
 
