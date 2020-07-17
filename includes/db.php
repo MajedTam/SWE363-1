@@ -1,4 +1,8 @@
+<!-- retrieving user input on TESTs -->
+
 <!DOCTYPE html>
+
+
 <html lang="en">
 
 <head>
@@ -13,6 +17,7 @@
     
     require('connection.php');
 
+    //retrieve user input and put it in vars
     $test_name = $_POST['testName'];
     $test_date = $_POST['date'];
     $test_hours = $_POST['durationHours'];
@@ -24,6 +29,8 @@
     
     echo nl2br($test_name . "\n" . $test_date . "\n" . $test_duration . "\n" . $test_display . "\n" . $test_backtrack);
     
+
+    //statment below puts the retrieved data into the database
     $statment = $db->prepare("INSERT INTO 
     tests(Test_Name,
     Test_Date,

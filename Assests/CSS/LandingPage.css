@@ -48,6 +48,14 @@ main{
   box-shadow:   0 0 10px  rgba(153, 153, 153, 0.3);
 
 }
+.ab{
+  text-decoration: none;
+  color: white ;
+}
+.ab:hover{
+  text-decoration: none;
+  color: white ;
+}
 
 .box2{
   display: flex;

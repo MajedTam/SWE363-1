@@ -49,7 +49,7 @@
 
             <div class="box">
 
-                <form id="testForm" action="php/db.php" method="POST">
+                <form id="testForm" action="includes/db.php" method="POST">
 
                     <div class="boxContent">
 

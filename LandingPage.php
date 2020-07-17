@@ -15,28 +15,9 @@
 <body>
 
 
-
-<div class="header">
-
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">ExamPlatform</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ml-auto nav-links">
-        
-        <a class="nav-item nav-link item" href="#">Home </a>
-        <a class="nav-item nav-link" href="#">Login</a>
-        <a class="nav-item nav-link " href="#">Contact</a>
-        <a class="nav-item nav-link " href="#">Sign up</a>
-      </div>
-    </div>
-  </nav>
-
-
-</div>
-
+<?php
+require 'header.php';
+?>
 
   <main>
 
@@ -49,7 +30,17 @@
         <p id="landingpageP" >An online Exam Preparation and Learning Management System 
          <br> that’s easy to use, and easy to manage</p>
 
-         <button>Create Test </button>
+         
+         <?php
+
+if (isset($_SESSION['id'])) {
+    echo '<button > <a class="ab" href="ConfigreTest.php">Create Test</a>  </button>';  
+        
+} else {
+    echo '<button > <a class="ab" href="login.php">Create Test</a>  </button>';  
+}
+
+?>
         
       </div>
    

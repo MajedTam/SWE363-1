@@ -1,3 +1,5 @@
+<!-- connection to local host -->
+<!-- 
 <?php
 $dsn = "mysql:host=localhost;dbname=db";
 $username = "root";
@@ -14,4 +16,4 @@ try {
 }
 
 
-?>
+?> -->
