@@ -28,8 +28,8 @@ require 'header.php';
         <div class="mainBox">
 
             <div class="box">
-
-                <form id="testForm" action="includes/db.php" method="POST">
+    <!-- change action !! -->
+                <form id="testForm" action="includes/db.php" method="POST" enctype="multipart/form-data">
 
                     <div class="boxContent">
 
@@ -57,8 +57,15 @@ require 'header.php';
                             class="radioLabel">Enable</label>
                         <input type="radio" name="selection2" value="Dis"><label for="ordered"
                             class="radioLabel">Disabled</label>
+                          
+                        <br>
+                           <br>
 
-                        <input class="btn" type="submit" value="Submit">
+                            <input type="file" name="import_excel" >
+                           <br> <label for="import_excel"> *upload Student Exel file in<a href=""> This </a> format</label>
+                <br>
+
+                        <input class="btn" type="submit" value="Submit" name="submit">
 
                     </div>
                 </form>
@@ -66,7 +73,7 @@ require 'header.php';
             </div>
 
 
-            <form id="questionForm" action="php/db.php" method="POST">
+            <form id="questionForm" action="includes/handelquestions.php" method="POST">
 
                 <div id="box2">
 
@@ -75,17 +82,17 @@ require 'header.php';
 
                         <button class="addButton" type="button">+</button>
                         <label for="questionName" class="boldLabels">Question</label> <input
-                            placeholder="Type your question here" class="textInput" type="text" name="questionName">
+                            placeholder="Type your question here" class="textInput" type="text" name="questions[]">
 
                         <!-- Text answar -->
-                        <input type="text" class="textInput textAnswer hide" placeholder="Answer">
+                        <input type="text" class="textInput textAnswer hide" placeholder="Answer" name="questions[][]">
 
                         <div class="mcqBox">
 
                             <!-- mcq answar -->
                             <div class="mcq">
                                 <input type="radio" class="answers" name="num0">
-                                <input type="text" class="mcqLabel">
+                                <input type="text" class="mcqLabel" name="questions[][]">
                                 <button class="addMcq" type="button">+</button>
                             </div>
                         </div>
@@ -101,7 +108,7 @@ require 'header.php';
 
                     </div>
                 </div>
-
+                <input class="btn" type="submit" value="Submit" name="submit_questions">
             </form>
 
 

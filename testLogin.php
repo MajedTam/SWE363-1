@@ -27,7 +27,7 @@
         <div class="boxb">
 
             <div id="backgroundColor">
-                <form action="GET">
+                <form method="POST" action="includes/studentLogin.inc.php">
 
 
                     <h1 id="formLogo">Take Your Test</h1>
@@ -36,7 +36,7 @@
                     <input type="text" name="Name">
                     <label for="ID">ID</label>
                     <input type="text" name="ID">
-                    <button id="login">Login</button>
+                    <button id="login" name='login'>Login</button>
 
                 </form>
             </div>
