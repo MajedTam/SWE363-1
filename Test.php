@@ -43,7 +43,7 @@
         session_start();
        
         ?>
-   <form action="" method="POST" class="form">
+   <form action="finishedTest.php" method="POST" class="form" name="testForm">
         <div class="questions">
          
 
@@ -56,9 +56,9 @@
 
                 echo '   <div class="questionBox">
                 <p class="question"> ' . $question['Question_text'] . ' </p>';
-                if ($question['type'] == 'text') {
+                if ($question['Type'] == 'text') {
                     echo  '<textarea name="message" class="textAnswer" rows="5" cols="30" placeholder="Answer"></textarea>     </div> ';
-                } else if ($question['type'] == 'mcq') {
+                } else if ($question['Type'] == 'mcq') {
 
                    for( $i=1 ; $i<=4 ; $i++){
                         if( !empty($question['MCQ'.$i] ) ){
@@ -76,7 +76,7 @@
                     $j++;
             }
             ?>
-<input type="submit" value="Submit Test" class="submitTest">
+<input type="submit" value="Submit Test" class="submitTest" name="submitTest">
 
         </div>
 </form>
@@ -88,6 +88,8 @@
 
 
 
+<script>var  timeInMin = <?php echo $_SESSION['test']['Test_Duration']?>   </script>
+
 
 
     <script src="Assests/JS/Test.js"></script>
@@ -97,3 +99,13 @@
 </body>
 
 </html>
+
+
+ <?php
+ 
+ $test_duration_in_Mseconds = ($_SESSION['test']['Test_Duration']*60 ) *1000;
+ echo "<script> window.setTimeout(function() {
+    document.forms['testForm'].submit();
+}, ".$test_duration_in_Mseconds.");</script>";
+
+?>

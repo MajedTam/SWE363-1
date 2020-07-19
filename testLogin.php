@@ -34,8 +34,10 @@
 
                     <label for="Name">Name</label>
                     <input type="text" name="Name">
-                    <label for="ID">ID</label>
+                    <label for="ID">Student ID</label>
                     <input type="text" name="ID">
+                    <label for="Test_id">Test code</label>
+                    <input type="text" name="Test_id">
                     <button id="login" name='login'>Login</button>
 
                 </form>
