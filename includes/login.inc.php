@@ -22,29 +22,42 @@ if (isset($_POST['login-submit'])) {
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
             if ($row = mysqli_fetch_assoc($result)) {
-                $passwordCheck = password_verify($password , $row['password']);
-                if($passwordCheck == false){
+                $passwordCheck = password_verify($password, $row['password']);
+                if ($passwordCheck == false) {
                     header("Location: ../Login.php?error=wrongPassword");
                     exit();
-                }
-                else if ($passwordCheck == true){
+                } else if ($passwordCheck == true) {
                     // login session 
                     session_start();
                     $_SESSION['id'] = $row['instructor_id'];
-                    $_SESSION['username'] = $row['username']; 
+                    $_SESSION['username'] = $row['username'];
+
+                    $sql = "SELECT * from tests  where instructor_id =" . $row['instructor_id'];
+                    $result = $conn->query($sql);
+
+                    if ($tests = $result->fetch_all(MYSQLI_ASSOC)) {
+                    // save test in session
+                        $_SESSION['test'] = $tests;
+                       
+                    } else {
+                        header("Location: ../Login.php?error=serverError");
+                        exit();
+                    }
+
+
+
+
+
+
+
                     header("Location: ../Dashboard.php?login=success");
                     exit();
-                
 
-                }
-                else{
+
+                } else {
                     header("Location: ../Login.php?error=wrongPassword");
                     exit();
                 }
-
-
-
-
             } else {
                 header("Location: ../Login.php?error=nouser");
                 exit();

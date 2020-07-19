@@ -27,16 +27,18 @@
         <div class="boxb">
 
             <div id="backgroundColor">
-                <form action="GET">
+                <form method="POST" action="includes/studentLogin.inc.php">
 
 
                     <h1 id="formLogo">Take Your Test</h1>
 
                     <label for="Name">Name</label>
                     <input type="text" name="Name">
-                    <label for="ID">ID</label>
+                    <label for="ID">Student ID</label>
                     <input type="text" name="ID">
-                    <button id="login">Login</button>
+                    <label for="Test_id">Test code</label>
+                    <input type="text" name="Test_id">
+                    <button id="login" name='login'>Login</button>
 
                 </form>
             </div>

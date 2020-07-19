@@ -26,114 +26,37 @@
     <div class="mainBox">
         <main>
 
-            <?php
-
-            if (isset($_SESSION['id'])) {
-                echo '<p> logged in ! </p>';
-            } else {
-                echo '<p> logged out ! </p>';
-            }
-
-            ?>
 
 
-            <button id="plus">+</button>
+          <a id="btnLink"href="ConfigreTest.php"><button id="plus" >+</button></a>  
 
             <div id="line1"></div>
             <div id="line2"></div>
 
             <div class="box1">
-                <div class="testCard">
+
+
+
+
+                <?php
+                foreach ($_SESSION['test'] as $test) {
+
+                    echo '<div class="testCard">
                     <div class="testInfo">
                         <p>
-                            <p class="testName">Test 1</p>
-                            SWE 363
-                            <br>
-                            <p class="date">4/23/2020</p>
+                            <p class="testName"> ' . $test['Test_Name'] . ' </p>
+                            <p class="date">Test Code: '  . $test['Test_Id'] . '</p>
+                            <p class="date">Date and Time:<br>'  . $test['Test_Date'] . '</p>
                         </p>
 
                     </div>
 
-                </div>
+                </div>    ';
+                }
 
-                <div class="testCard">
-                    <div class="testInfo">
-                        <p>
-                            <p class="testName">Test 1</p>
-                            SWE 363
-                            <br>
-                            <p class="date">4/23/2020</p>
-                        </p>
+                
 
-                    </div>
-
-                </div>
-                <div class="testCard">
-                    <div class="testInfo">
-                        <p>
-                            <p class="testName">Test 1</p>
-                            SWE 363
-                            <br>
-                            <p class="date">4/23/2020</p>
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="testCard">
-                    <div class="testInfo">
-                        <p>
-                            <p class="testName">Test 1</p>
-                            SWE 363
-                            <br>
-                            <p class="date">4/23/2020</p>
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="testCard">
-                    <div class="testInfo">
-                        <p>
-                            <p class="testName">Test 1</p>
-                            SWE 363
-                            <br>
-                            <p class="date">4/23/2020</p>
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="testCard">
-                    <div class="testInfo">
-                        <p>
-                            <p class="testName">Test 1</p>
-                            SWE 363
-                            <br>
-                            <p class="date">4/23/2020</p>
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="testCard">
-                    <div class="testInfo">
-                        <p>
-                            <p class="testName">Test 1</p>
-                            SWE 363
-                            <br>
-                            <p class="date">4/23/2020</p>
-                        </p>
-
-                    </div>
-
-                </div>
+                ?>
             </div>
 
         </main>

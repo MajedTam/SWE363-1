@@ -7,7 +7,7 @@ main{
     height: 100%;
    margin-left: 8vw;
    padding-top: 67px !important;
-  
+  width: 100%;
    
   
    
@@ -16,17 +16,19 @@ main{
 .mainBox{
 display: inline-block;
 margin-top: 100px;
+width: 100%;
 }
 
 
 
 
 #line1{
-    width: 80%;
+    width: 50%;
     margin: 20px 0 5px 0;;
     background-color: #222222;
-    height: 2px;
+    height: 4px;
     border: none;
+    border-radius: 20px;
     
     
 }
@@ -34,9 +36,10 @@ margin-top: 100px;
 #line2{
     margin:0;
     width: 30%;
-    background-color: #F0F0F0;
-    height: 2px;
+    background-color: #9c9c9c;
+    height: 3px;
     border: none;
+    border-radius: 5px;
     
 }
 
@@ -45,13 +48,14 @@ margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    
    
 
 }
 
 .testCard{
     width: 150px;
-    height: 170px;
+    height: 200px;
     box-shadow:  0 0 10px  rgba(75, 75, 75, 0.1);
     margin: 20px 10px 20px 10px;
 
@@ -75,7 +79,8 @@ margin-bottom: 5px;
 
 .date{
     color: #22222281;
-    margin-top: 30px;
+    margin-top: 5px;
+    margin-bottom: 0;
     font-size: 15px;
 }
 
@@ -96,5 +101,20 @@ margin-bottom: 5px;
 
 #plus:hover{
     box-shadow:  0 0 10px  rgba(75, 75, 75, 0.2);
+}
+#btnLink{
+    text-decoration: none;
+    color: none;
+    background-color: #F0F0F0;
+    color: #222222;
+    font-size: 64px ;
+    border: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
 }
 
